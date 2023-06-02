@@ -1,8 +1,23 @@
 import { useState } from "react";
 import "./App.css";
-
+import Mainboard from "./Mainboard";
 function App() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState(null);
+  const [username, setUsername] = useState("");
+  const onChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const onSubmit = () => {
+    fetch(`https://api.github.com/users/${username}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+      });
+  };
 
   return (
     <div className="app">
@@ -14,10 +29,13 @@ function App() {
         </div>
       </header>
       <section className="searchBar">
-        <input type="text" className="input" />
+        <input type="text" className="input" onChange={onChange} />
         <img src="./assets/icon-search.svg" alt="search" className="search" />
-        <button className="btn">Search</button>
+        <button className="btn" onClick={onSubmit}>
+          Search
+        </button>
       </section>
+      {user ? <Mainboard user={user} /> : null}
     </div>
   );
 }

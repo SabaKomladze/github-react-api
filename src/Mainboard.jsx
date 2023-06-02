@@ -35,20 +35,22 @@ function Mainboard(props) {
       </div>
       <section className="mainData">
         {props.user.bio}
+        {/* stats*/}
         <div className="stats">
           <div className="repos">
-            <p className="repo"> Repos</p>
-            {props.user.public_repos}
+            <p className="repo middle-text"> Repos</p>
+            <p className="middle-num">{props.user.public_repos}</p>
           </div>
           <div className="followers">
-            <p className="follower">followers</p>
-            {props.user.followers}
+            <p className="follower middle-text">followers</p>
+            <p className="middle-num">{props.user.followers}</p>
           </div>
           <div className="followings">
-            <p className="folling">following</p>
-            {props.user.following}
+            <p className="folling middle-text">following</p>
+            <p className="middle-num">{props.user.following}</p>
           </div>
         </div>
+        {/* contact*/}
         <div className="contact">
           <div className="loc">
             <img
@@ -56,7 +58,7 @@ function Mainboard(props) {
               alt="location mark"
               className="location"
             />
-            <p className="city">{props.user.location}</p>
+            <p className="city  text">{props.user.location}</p>
           </div>
           <div className="loc">
             <img
@@ -64,7 +66,7 @@ function Mainboard(props) {
               alt="website"
               className="web"
             />
-            <p className="weblink">{props.user.blog}</p>
+            <p className="weblink  text">{props.user.blog}</p>
           </div>
           <div className="loc">
             <img
@@ -72,7 +74,7 @@ function Mainboard(props) {
               alt="twitter logo"
               className="tw"
             />
-            <p className="twitter">{props.user.twitter_username}</p>
+            <p className="twitter  text">{props.user.twitter_username}</p>
           </div>
           <div className="loc">
             <img
@@ -80,7 +82,7 @@ function Mainboard(props) {
               alt="company logo"
               className="build"
             />
-            <p className="company">{props.user.company}</p>
+            <p className="company text">{props.user.company}</p>
           </div>
         </div>
       </section>

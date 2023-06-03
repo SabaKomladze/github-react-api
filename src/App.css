@@ -49,3 +49,11 @@ header {
   top: 45px;
   right: 10px;
 }
+@media (min-width: 768px) {
+  .app {
+    padding: 0 98px;
+  }
+  header {
+    margin-top: 140px;
+  }
+}

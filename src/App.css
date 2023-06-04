@@ -57,3 +57,8 @@ header {
     margin-top: 140px;
   }
 }
+@media (min-width: 1440px) {
+  .app {
+    padding: 0 355px;
+  }
+}

@@ -23,11 +23,15 @@ function Mainboard(props) {
   let monthname = months[month];
   return (
     <div className="mainboard">
+      {<img src={props.user.avatar_url} alt="avatar" className="avatar" />}
+
       <div className="name-date-avatar">
-        {<img src={props.user.avatar_url} alt="avatar" className="avatar" />}
         <div className="name-date">
-          <p className="login">{props.user.login}</p>
-          <p className="rateSign">@{props.user.login}</p>
+          <div className="name-rate">
+            <p className="login">{props.user.login}</p>
+            <p className="rateSign">@{props.user.login}</p>
+          </div>
+
           <p className="join">
             Joined {year} {monthname} {day}
           </p>

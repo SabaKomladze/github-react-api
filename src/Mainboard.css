@@ -4,6 +4,9 @@
   border-radius: 15px;
   padding: 32px 24px 48px;
   margin-top: 16px;
+  display: grid;
+  gap: 19px;
+  grid-template-columns: 1fr 6fr;
 }
 .avatar {
   width: 70px;
@@ -12,9 +15,13 @@
 }
 .name-date-avatar {
   display: flex;
-
+  grid-column-start: 2;
   gap: 19.5px;
   align-items: center;
+}
+.mainData {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 .login {
   font-weight: 700;
@@ -144,5 +151,40 @@
   .middle-text {
     font-size: 13px;
     line-height: 19px;
+  }
+}
+@media (min-width: 1440px) {
+  .name-date {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .join {
+    position: relative;
+    top: 10px;
+  }
+  .mainboard {
+    gap: 37px;
+    padding: 48px;
+    row-gap: 0;
+  }
+  .avatar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+    top: 30px;
+  }
+  .name-date-avatar {
+    grid-column-start: 2;
+  }
+  .mainData {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .contact {
+    margin-top: 37px;
+  }
+  .bio {
+    margin-top: 0;
   }
 }

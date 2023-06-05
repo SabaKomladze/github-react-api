@@ -43,15 +43,30 @@ function Mainboard(props) {
         {/* stats*/}
         <div className="stats">
           <div className="repos">
-            <p className="repo middle-text"> Repos</p>
+            <p
+              className="repo middle-text"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }}
+            >
+              Repos
+            </p>
             <p className="middle-num">{props.user.public_repos}</p>
           </div>
           <div className="followers">
-            <p className="follower middle-text">followers</p>
+            <p
+              className="follower middle-text"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }}
+            >
+              followers
+            </p>
             <p className="middle-num">{props.user.followers}</p>
           </div>
           <div className="followings">
-            <p className="folling middle-text">following</p>
+            <p
+              className="folling middle-text"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }}
+            >
+              following
+            </p>
             <p className="middle-num">{props.user.following}</p>
           </div>
         </div>
@@ -73,7 +88,14 @@ function Mainboard(props) {
                 alt="location mark"
                 className="location errimg"
               />
-              <p className="errormsg first">Not Available</p>
+              <p
+                className="errormsg first"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                Not Available
+              </p>
             </div>
           )}
           {props.user.blog ? (
@@ -92,7 +114,14 @@ function Mainboard(props) {
                 alt="website"
                 className="web  errimg"
               />
-              <p className="errormsg">Not Available</p>
+              <p
+                className="errormsg"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                Not Available
+              </p>
             </div>
           )}
           {props.user.twitter_username ? (
@@ -111,7 +140,14 @@ function Mainboard(props) {
                 alt="twitter logo"
                 className="tw  errimg"
               />
-              <p className="errormsg">Not Available</p>
+              <p
+                className="errormsg"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                Not Available
+              </p>
             </div>
           )}
           {props.user.company ? (
@@ -130,7 +166,14 @@ function Mainboard(props) {
                 alt="company logo"
                 className="build  errimg"
               />
-              <p className="errormsg">Not Available</p>
+              <p
+                className="errormsg"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                Not Available
+              </p>
             </div>
           )}
         </div>

@@ -22,17 +22,32 @@ function Mainboard(props) {
   const day = date.getDate();
   let monthname = months[month];
   return (
-    <div className="mainboard">
+    <div
+      className="mainboard"
+      style={
+        props.theme
+          ? { backgroundColor: "#1E2A47" }
+          : { backgroundColor: "#FEFEFE" }
+      }
+    >
       {<img src={props.user.avatar_url} alt="avatar" className="avatar" />}
 
       <div className="name-date-avatar">
         <div className="name-date">
           <div className="name-rate">
-            <p className="login">{props.user.login}</p>
+            <p
+              className="login"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#697C9A" }}
+            >
+              {props.user.login}
+            </p>
             <p className="rateSign">@{props.user.login}</p>
           </div>
 
-          <p className="join">
+          <p
+            className="join"
+            style={props.theme ? { color: "#FFFFFF" } : { color: "#697C9A" }}
+          >
             Joined {year} {monthname} {day}
           </p>
         </div>
@@ -41,7 +56,14 @@ function Mainboard(props) {
         <div className="bio">{props.user.bio}</div>
 
         {/* stats*/}
-        <div className="stats">
+        <div
+          className="stats"
+          style={
+            props.theme
+              ? { backgroundColor: "#141D2F" }
+              : { backgroundColor: "#F6F8FF" }
+          }
+        >
           <div className="repos">
             <p
               className="repo middle-text"
@@ -49,7 +71,12 @@ function Mainboard(props) {
             >
               Repos
             </p>
-            <p className="middle-num">{props.user.public_repos}</p>
+            <p
+              className="middle-num"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#2B3442" }}
+            >
+              {props.user.public_repos}
+            </p>
           </div>
           <div className="followers">
             <p
@@ -58,7 +85,12 @@ function Mainboard(props) {
             >
               followers
             </p>
-            <p className="middle-num">{props.user.followers}</p>
+            <p
+              className="middle-num"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#2B3442" }}
+            >
+              {props.user.followers}
+            </p>
           </div>
           <div className="followings">
             <p
@@ -67,7 +99,12 @@ function Mainboard(props) {
             >
               following
             </p>
-            <p className="middle-num">{props.user.following}</p>
+            <p
+              className="middle-num"
+              style={props.theme ? { color: "#FFFFFF" } : { color: "#2B3442" }}
+            >
+              {props.user.following}
+            </p>
           </div>
         </div>
         {/* contact*/}
@@ -79,7 +116,14 @@ function Mainboard(props) {
                 alt="location mark"
                 className="location"
               />
-              <p className="city  text">{props.user.location}</p>
+              <p
+                className="city  text"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                {props.user.location}
+              </p>
             </div>
           ) : (
             <div className="error">
@@ -105,7 +149,14 @@ function Mainboard(props) {
                 alt="website"
                 className="web"
               />
-              <p className="weblink  text">{props.user.blog}</p>
+              <p
+                className="weblink  text"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                {props.user.blog}
+              </p>
             </div>
           ) : (
             <div className="error">
@@ -131,7 +182,14 @@ function Mainboard(props) {
                 alt="twitter logo"
                 className="tw"
               />
-              <p className="twitter  text">{props.user.twitter_username}</p>
+              <p
+                className="twitter  text"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                {props.user.twitter_username}
+              </p>
             </div>
           ) : (
             <div className="error">
@@ -157,7 +215,14 @@ function Mainboard(props) {
                 alt="company logo"
                 className="build"
               />
-              <p className="company text">{props.user.company}</p>
+              <p
+                className="company text"
+                style={
+                  props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }
+                }
+              >
+                {props.user.company}
+              </p>
             </div>
           ) : (
             <div className="error">

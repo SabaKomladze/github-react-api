@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Mainboard from "./Mainboard";
+
+import Mainboard from "./components/Mainboard";
 function App() {
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("");
@@ -16,8 +17,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
-
         if (!data.login) {
           setError(true);
           setUser(null);
@@ -30,7 +29,7 @@ function App() {
   const changeTheme = () => {
     setTheme(!theme);
   };
-  console.log(theme);
+
   return (
     <div
       className="container"
@@ -48,7 +47,11 @@ function App() {
           </h2>
           <div className="theme" onClick={changeTheme}>
             <p className="color">dark</p>
-            <img src="./assets/icon-moon.svg" alt="moon" className="moon" />
+            {theme ? (
+              <img src="./assets/icon-sun.svg" alt="sun" className="sun" />
+            ) : (
+              <img src="./assets/icon-moon.svg" alt="moon" className="moon" />
+            )}
           </div>
         </header>
         <section className="searchBar">

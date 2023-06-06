@@ -77,7 +77,12 @@ function Mainboard(props) {
         </div>
       </div>
       <section className="mainData">
-        <div className="bio">{props.user.bio}</div>
+        <div
+          className="bio"
+          style={props.theme ? { color: "#FFFFFF" } : { color: "#4B6A9B" }}
+        >
+          {props.user.bio}
+        </div>
         {/* stats*/}
         <div
           className="stats"

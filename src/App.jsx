@@ -56,13 +56,14 @@ function App() {
         </header>
         <section className="searchBar">
           <input
+            placeholder="Search GitHub username…"
             type="text"
             className="input"
             onChange={onChange}
             style={
               theme
-                ? { backgroundColor: "#1E2A47" }
-                : { backgroundColor: "#FEFEFE" }
+                ? { backgroundColor: "#1E2A47", color: "#FFFFFF" }
+                : { backgroundColor: "#FEFEFE", color: "#222731" }
             }
           />
           <img src="./assets/icon-search.svg" alt="search" className="search" />
